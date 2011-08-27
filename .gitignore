@@ -1,0 +1,19 @@
+# IDE files
+nbproject
+
+# Temporary files
+tmp/cache/models/*
+tmp/cache/persistent/*
+tmp/cache/views/*
+tmp/cache/*
+tmp/logs/*
+tmp/sessions/*
+tmp/tests/*
+tmp/tests/.gitkeep
+
+# Configuration files
+config/database.php
+
+# webroot media files
+webroot/media/*
+
