@@ -7,9 +7,9 @@ extending the CakeDC users plugin.
 * clone the repo into /path/to/project/
 * replace weboot/index.php with one that is configured for your environment
 * create the empty database and config/database.php
-* execute from repo root dir: cake migration run all -plugin users
-* execute from repo root dir: cake migration run all -plugin tags
-* execute from repo dir: cake migration run all -plugin media
+* execute from /path/to/project/ dir: cake migration run all -plugin users
+* execute from /path/to/project/ dir: cake migration run all -plugin tags
+* execute from /path/to/project/ dir: cake migration run all -plugin media
 
 ## Included plugins ##
 * CakePHP Debug Kit
