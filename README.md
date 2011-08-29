@@ -19,6 +19,7 @@ extending the CakeDC users plugin.
 * CakeDC search
 * CakeDC tags
 * media (forked from david pearson's media plugin)
+* Mcurry Interactive plugin for DebugKit
 
 ## Extending the users plugin ##
 

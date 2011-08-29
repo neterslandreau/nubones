@@ -31,13 +31,15 @@
  * @subpackage    cake.app
  */
 class AppController extends Controller {
+	protected $_cookieName = 'nubonesRememberMe';
     public $components = array(
 		'Session',
 		'Auth',
 		'Cookie',
 		'Email',
 		'RequestHandler',
-		'Search.Prg'
+		'Search.Prg',
+		'DebugKit.Toolbar' => array('panels' => array('Interactive.interactive')),
 	);
 	public $helpers = array(
 		'Session',
@@ -49,16 +51,8 @@ class AppController extends Controller {
 	);
 	public $publicControllers = array('pages');
 /**
- * Object constructor - Adds the Debugkit panel if in development mode
- *
- * @return void
+ * 
  */
-	public function __construct() {
-		if (Configure::read('debug')) {
-			$this->components[] = 'DebugKit.Toolbar';
-		}
-		parent::__construct();
-	}
 	public function beforeFilter() {
 		// i like to be able to view emails in development from debug kit
 		if (Configure::read('debug')) {
@@ -73,7 +67,7 @@ class AppController extends Controller {
 		$this->Auth->authorize = 'controller';
 		$this->Auth->fields = array('username' => 'email', 'password' => 'passwd');
 
-		$this->Cookie->name = 'bonesRememberMe';
+		$this->Cookie->name = $this->_cookieName;
 		$this->Cookie->time = '1 Month';
 		$cookie = $this->Cookie->read('User');
 
