@@ -31,6 +31,11 @@
  * @subpackage    cake.app
  */
 class AppController extends Controller {
+/**
+ * This is the cookie name for the remember me feature. It is also used in app_users_controller::_setCookie()
+ *
+ * @var string
+ */
 	protected $_cookieName = 'nubonesRememberMe';
     public $components = array(
 		'Session',
