@@ -31,3 +31,5 @@ creating app/views/app_users directory and overriding the plugin views.
 
 The plugins were included in this repo using "fake submodules". Use the techniques outlined by:
 http://debuggable.com/posts/git-fake-submodules:4b563ee4-f3cc-4061-967e-0e48cbdd56cb
+
+/docs
