@@ -24,14 +24,8 @@
 			&nbsp;
 		</dd>
 		<?php
-//debug($user['Detail']);
-			if (!empty($user['Detail'])) {
-				foreach ($user['Detail']['user'] as $field => $value) {
-					echo '<dt>' . $field . '</dt>';
-					echo '<dd>' . $value . '</dd>';
-					echo '<br>';
-				}
-			}
+			$img = 'users' . DS . $user['Profile']['path'] . DS . 'thumb_' . $user['Profile']['photo'];
+			echo $this->Html->image($img);
 		?>
 	</dl>
 </div>
