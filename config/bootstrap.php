@@ -48,3 +48,9 @@
  * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
  *
  */
+Configure::write('Cryptable.cipher', 'tripledes');
+Configure::write('Cryptable.key','yoursupersecretkey');
+$td = mcrypt_module_open('tripledes', '', 'ecb', '');
+$iv = mcrypt_create_iv (mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
+mcrypt_module_close($td);
+Configure::write('Cryptable.iv', $iv);
