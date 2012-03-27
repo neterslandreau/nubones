@@ -71,6 +71,7 @@ class AppController extends Controller {
 		$this->Auth->autoRedirect = false;
 		$this->Auth->authorize = 'controller';
 		$this->Auth->fields = array('username' => 'email', 'password' => 'passwd');
+		$this->Auth->userScope = array('User.email_authenticated' => 1);
 
 		$this->Cookie->name = $this->_cookieName;
 		$this->Cookie->time = '1 Month';
